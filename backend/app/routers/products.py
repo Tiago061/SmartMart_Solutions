@@ -1,9 +1,9 @@
 from fastapi import APIRouter, Depends, UploadFile, File
 from sqlalchemy.orm import Session
-from database import SessionLocal
-from schemas import ProductCreate
-from crud import create_product, get_products
-from csv_utils import read_csv
+from app.database import SessionLocal
+from app.schemas import ProductCreate
+from app.crud import create_product, get_products
+from app.csv_utils import read_csv
 
 router = APIRouter(prefix="/products")
 

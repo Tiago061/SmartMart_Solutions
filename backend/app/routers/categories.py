@@ -1,8 +1,8 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
-from database import SessionLocal
-from schemas import CategoryCreate
-from crud import create_category, get_categories
+from app.database import SessionLocal
+from app.schemas import CategoryCreate
+from app.crud import create_category, get_categories
 
 router = APIRouter(prefix="/categories")
 

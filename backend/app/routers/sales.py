@@ -1,8 +1,8 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
-from database import SessionLocal
-from schemas import SaleCreate
-from crud import create_sale, get_sales
+from app.database import SessionLocal
+from app.schemas import SaleCreate
+from app.crud import create_sale, get_sales
 
 router = APIRouter(prefix="/sales")
 

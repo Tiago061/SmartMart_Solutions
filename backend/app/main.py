@@ -1,6 +1,6 @@
 from fastapi import FastAPI
-from database import Base, engine
-from routers import products, categories, sales
+from app.database import Base, engine
+from app.routers import products, categories, sales
 
 Base.metadata.create_all(bind=engine)
 
