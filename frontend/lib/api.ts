@@ -34,13 +34,29 @@ export const api = {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name }),
     }).then((res) => res.json()),
+  uploadCategoriesCsv: (file: File) => {
+    const formData = new FormData()
+    formData.append("file", file)
+    return fetch(`${API_BASE}/categories/upload-csv`, {
+      method: "POST",
+      body: formData,
+    }).then((res) => res.json())
+  },
 
   // Sales
   getSales: () => fetch(`${API_BASE}/sales/`).then((res) => res.json()),
-  createSale: (data: { product_id: number; month: number; quantity: number; total_price: number }) =>
+  createSale: (data: { product_id: number; quantity: number; total_price: number; date: string }) =>
     fetch(`${API_BASE}/sales/`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
     }).then((res) => res.json()),
+  uploadSalesCsv: (file: File) => {
+    const formData = new FormData()
+    formData.append("file", file)
+    return fetch(`${API_BASE}/sales/upload-csv`, {
+      method: "POST",
+      body: formData,
+    }).then((res) => res.json())
+  },
 }

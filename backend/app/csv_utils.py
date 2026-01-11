@@ -1,6 +1,11 @@
 import csv
+import codecs
 
 def read_csv(file):
-    content = file.file.read().decode("utf-8").splitlines()
-    reader = csv.DictReader(content)
+    file.file.seek(0)
+  
+    stream = codecs.iterdecode(file.file, 'utf-8-sig')
+    reader = csv.DictReader(stream)
+   
+    reader.fieldnames = [n.strip().lower() for n in reader.fieldnames]
     return list(reader)
