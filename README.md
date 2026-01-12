@@ -21,9 +21,9 @@ Bash: cd backend
 Instale as dependências:
 
 Bash: pip install fastapi uvicorn sqlalchemy pydantic python-multipart ou pip install -r requirements.txt
-Inicie o servidor: Bash
 
-uvicorn app.main:app --reload
+Inicie o servidor: uvicorn app.main:app --reload
+
 O servidor estará rodando em: http://127.0.0.1:8000
 
 Documentação interativa (Swagger): http://127.0.0.1:8000/docs
