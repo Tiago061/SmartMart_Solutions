@@ -11,6 +11,7 @@ Python 3.10+ instalado.
 Node.js 18+ e npm/yarn instalados.
 
 2. Configurando o Backend (Python/FastAPI)
+   
 Navegue até a pasta do backend:
 
 Faça git clone do projeto
@@ -19,7 +20,7 @@ Bash: cd backend
 
 Instale as dependências:
 
-Bash: pip install fastapi uvicorn sqlalchemy pydantic python-multipart
+Bash: pip install fastapi uvicorn sqlalchemy pydantic python-multipart ou pip install -r requirements.txt
 Inicie o servidor: Bash
 
 uvicorn app.main:app --reload
