@@ -13,26 +13,14 @@ Node.js 18+ e npm/yarn instalados.
 2. Configurando o Backend (Python/FastAPI)
 Navegue até a pasta do backend:
 
-Bash
+Faça git clone do projeto
 
-cd backend
-Crie e ative um ambiente virtual:
+Bash: cd backend
 
-Bash
-
-python -m venv venv
-# No Windows:
-venv\Scripts\activate
-# No Linux/Mac:
-source venv/bin/activate
 Instale as dependências:
 
-Bash
-
-pip install fastapi uvicorn sqlalchemy pandas
-Inicie o servidor:
-
-Bash
+Bash: pip install fastapi uvicorn sqlalchemy pydantic python-multipart
+Inicie o servidor: Bash
 
 uvicorn app.main:app --reload
 O servidor estará rodando em: http://127.0.0.1:8000
