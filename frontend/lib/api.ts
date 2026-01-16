@@ -45,7 +45,7 @@ export const api = {
 
   // Sales
   getSales: () => fetch(`${API_BASE}/sales/`).then((res) => res.json()),
-  createSale: (data: { product_id: number; quantity: number; total_price: number; date: string }) =>
+  createSale: (data: { product_id: number; quantity: number; month: number; total_price: number; date: string }) =>
     fetch(`${API_BASE}/sales/`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },

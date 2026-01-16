@@ -42,6 +42,7 @@ export function SalesEditor({ sales, products, onUpdate }: SalesEditorProps) {
     month: "",
     quantity: "",
     total_price: "",
+    date: ''
   })
 
   const getProductName = (productId: number) => {
@@ -63,8 +64,9 @@ export function SalesEditor({ sales, products, onUpdate }: SalesEditorProps) {
         month: Number.parseInt(formData.month),
         quantity: Number.parseInt(formData.quantity),
         total_price: Number.parseFloat(formData.total_price),
+        date: formData.date
       })
-      setFormData({ product_id: "", month: "", quantity: "", total_price: "" })
+      setFormData({ product_id: "", month: "", quantity: "", total_price: "" , date: ""})
       onUpdate()
     } catch (error) {
       console.error("Error creating sale:", error)
