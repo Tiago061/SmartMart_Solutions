@@ -1,4 +1,4 @@
-export const API_BASE = process.env.NEXT_PUBLIC_API_URL || "https://smartmart-backend-5zhv.onrender.com/"
+export const API_BASE = process.env.NEXT_PUBLIC_API_URL || "https://smartmart-backend-5zhv.onrender.com"
 
 export const fetcher = async (url: string) => {
   const res = await fetch(url)
